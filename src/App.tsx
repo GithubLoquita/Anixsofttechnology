@@ -9,6 +9,7 @@ import { HeroSection } from './components/HeroSection';
 import { FeaturedProduct } from './components/FeaturedProduct';
 import { AboutSection } from './components/AboutSection';
 import { ServicesSection } from './components/ServicesSection';
+import { FAQSection } from './components/FAQSection';
 import { DiwaliExperience } from './components/DiwaliExperience';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
@@ -58,10 +59,13 @@ export default function App() {
         {/* 4. Services & Digital Capabilities */}
         <ServicesSection />
 
-        {/* 5. Interactive Diwali Pavilion (Altar of Lights) */}
+        {/* 5. Frequently Asked Questions (Accordion) */}
+        <FAQSection />
+
+        {/* 6. Interactive Diwali Pavilion (Altar of Lights) */}
         <DiwaliExperience />
 
-        {/* 6. Contact & Direct Inquiries */}
+        {/* 7. Contact & Direct Inquiries */}
         <ContactSection />
       </main>
 
