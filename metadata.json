@@ -1,0 +1,6 @@
+{
+  "name": "ANIX Software Technology",
+  "description": "Official website for ANIX Software Technology celebrating Diwali and showcasing QR Studio, our flagship digital utilities toolkit.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

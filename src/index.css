@@ -1,0 +1,228 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: #0B1120;
+    color: #F8FAFC;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+/* =========================================================================
+   DIWALI & CSS CARTOON KEYFRAME ANIMATIONS
+   ========================================================================= */
+
+/* Diya Flame Flicker */
+@keyframes flameOuter {
+  0%, 100% {
+    transform: scale(1) rotate(-1deg);
+    opacity: 0.95;
+    filter: drop-shadow(0 0 10px #f59e0b) drop-shadow(0 0 20px #ea580c);
+  }
+  25% {
+    transform: scale(1.08, 0.96) rotate(1.5deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 14px #f59e0b) drop-shadow(0 0 24px #ea580c);
+  }
+  50% {
+    transform: scale(0.95, 1.05) rotate(-2deg);
+    opacity: 0.92;
+    filter: drop-shadow(0 0 8px #f59e0b) drop-shadow(0 0 18px #d97706);
+  }
+  75% {
+    transform: scale(1.04, 0.98) rotate(1deg);
+    opacity: 0.98;
+    filter: drop-shadow(0 0 12px #f59e0b) drop-shadow(0 0 22px #ea580c);
+  }
+}
+
+@keyframes flameInner {
+  0%, 100% {
+    transform: scale(1) translateY(0);
+    opacity: 0.95;
+  }
+  50% {
+    transform: scale(0.9, 1.1) translateY(-1px);
+    opacity: 1;
+  }
+}
+
+/* Character Eye Blinking */
+@keyframes eyeBlink {
+  0%, 94%, 100% {
+    transform: scaleY(1);
+  }
+  96%, 98% {
+    transform: scaleY(0.1);
+  }
+}
+
+/* Character Gentle Idle Breath */
+@keyframes charBreathe {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+/* Arm Waving */
+@keyframes armWave {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-18deg);
+  }
+  50% {
+    transform: rotate(8deg);
+  }
+  75% {
+    transform: rotate(-14deg);
+  }
+}
+
+/* Gentle Namaste Hover */
+@keyframes namasteHover {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-2px) scale(1.01);
+  }
+}
+
+/* Hanging Lantern Sway */
+@keyframes lanternSway {
+  0%, 100% {
+    transform: rotate(-2.5deg);
+  }
+  50% {
+    transform: rotate(2.5deg);
+  }
+}
+
+/* Golden Stardust / Particles */
+@keyframes particleFloat {
+  0% {
+    transform: translateY(0) scale(0.8);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.8;
+  }
+  70% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-80px) scale(1.2);
+    opacity: 0;
+  }
+}
+
+/* Rangoli Subtle Ambient Rotation */
+@keyframes rangoliRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Gift Hover */
+@keyframes giftHover {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+/* Laptop Glow Pulse */
+@keyframes laptopScreenGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(245, 158, 11, 0.25), 0 0 35px rgba(99, 102, 241, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(245, 158, 11, 0.4), 0 0 50px rgba(99, 102, 241, 0.25);
+  }
+}
+
+/* Animation Classes */
+.animate-flame-outer {
+  animation: flameOuter 1.4s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+.animate-flame-inner {
+  animation: flameInner 0.9s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+.animate-eye-blink {
+  animation: eyeBlink 4s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+  transform-origin: center;
+}
+
+.animate-char-breathe {
+  animation: charBreathe 4s ease-in-out infinite;
+}
+
+.animate-arm-wave {
+  animation: armWave 2.2s ease-in-out infinite;
+  transform-origin: bottom right;
+}
+
+.animate-namaste {
+  animation: namasteHover 3s ease-in-out infinite;
+}
+
+.animate-lantern-sway {
+  animation: lanternSway 4.5s ease-in-out infinite alternate;
+  transform-origin: top center;
+}
+
+.animate-gift-hover {
+  animation: giftHover 3s ease-in-out infinite;
+}
+
+.animate-rangoli-spin {
+  animation: rangoliRotate 120s linear infinite;
+}
+
+.animate-laptop-glow {
+  animation: laptopScreenGlow 3s ease-in-out infinite;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.reduced-motion *,
+.reduced-motion *::before,
+.reduced-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}
